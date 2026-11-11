@@ -1,0 +1,88 @@
+/* AAR — generated from tokens.json. Não edite: rode npm run tokens. */
+:root, [data-theme="light"] {
+  color-scheme: light;
+  --ground: #F7FBFF;
+  --surface: #FFFFFF;
+  --mist: #DCE8FB;
+  --action: #2456E6;
+  --action-deep: #163A9E;
+  --on-action: #FFFFFF;
+  --ink: #0B1B33;
+  --ink-soft: #3B4B66;
+  --inverse: #0B1B33;
+  --on-inverse: #FFFFFF;
+  --on-inverse-soft: #C9D6EE;
+  --on-inverse-accent: #9DBBF5;
+  --line: #D6E2F5;
+  --line-soft: #E6EEF9;
+  --line-pending: #A9BCDB;
+  --positive: #1F7A4D;
+  --positive-soft: #E2F3EA;
+  --warning: #8A5A00;
+  --warning-soft: #FBEFD6;
+  --negative: #A23B1E;
+  --negative-soft: #F8E3DC;
+  --shadow-panel: 0 24px 60px rgba(11,27,51,0.06);
+}
+[data-theme="dark"] {
+  color-scheme: dark;
+  --ground: #0B1B33;
+  --surface: #12264A;
+  --mist: #1B3463;
+  --action: #9DBBF5;
+  --action-deep: #C9D6EE;
+  --on-action: #0B1B33;
+  --ink: #F2F6FD;
+  --ink-soft: #B7C6DF;
+  --inverse: #F2F6FD;
+  --on-inverse: #0B1B33;
+  --on-inverse-soft: #3B4B66;
+  --on-inverse-accent: #2456E6;
+  --line: #2A4170;
+  --line-soft: #1E3359;
+  --line-pending: #4A6189;
+  --positive: #6BC79A;
+  --positive-soft: #173D33;
+  --warning: #E9B85C;
+  --warning-soft: #40331A;
+  --negative: #F0957A;
+  --negative-soft: #47231C;
+  --shadow-panel: 0 24px 60px rgba(0,0,0,0.35);
+}
+:root {
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-28: 28px;
+  --space-40: 40px;
+  --space-64: 64px;
+  --space-96: 96px;
+  --space-112: 112px;
+  --space-120: 120px;
+  --radius-bubble: 4px;
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-2xl: 32px;
+  --radius-pill: 999px;
+  --font-sans: var(--font-inter-tight, "Inter Tight"), Inter, system-ui, sans-serif;
+  --font-serif: var(--font-instrument-serif, "Instrument Serif"), Georgia, serif;
+  --font-mono: ui-monospace, Menlo, Consolas, monospace;
+}
+.text-display-xl { font-family: var(--font-sans); font-size: 88px; font-weight: 700; line-height: 0.98; letter-spacing: -0.035em; }
+.text-display { font-family: var(--font-sans); font-size: 64px; font-weight: 700; line-height: 1; letter-spacing: -0.035em; }
+.text-heading-1 { font-family: var(--font-sans); font-size: 56px; font-weight: 700; line-height: 1.02; letter-spacing: -0.035em; }
+.text-heading-2 { font-family: var(--font-sans); font-size: 48px; font-weight: 700; line-height: 1.05; letter-spacing: -0.03em; }
+.text-title { font-family: var(--font-sans); font-size: 32px; font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; }
+.text-title-sm { font-family: var(--font-sans); font-size: 22px; font-weight: 700; line-height: 1.35; }
+.text-emphasis { font-family: var(--font-serif); font-size: 48px; font-weight: 400; line-height: 1.05; font-style: italic; }
+.text-body-lg { font-family: var(--font-sans); font-size: 21px; font-weight: 400; line-height: 1.5; }
+.text-body { font-family: var(--font-sans); font-size: 17px; font-weight: 400; line-height: 1.55; }
+.text-body-sm { font-family: var(--font-sans); font-size: 15px; font-weight: 400; line-height: 1.5; }
+.text-label { font-family: var(--font-sans); font-size: 13px; font-weight: 600; line-height: 1.3; letter-spacing: 0.18em; text-transform: uppercase; }
+.text-label-sm { font-family: var(--font-sans); font-size: 12px; font-weight: 700; line-height: 1.3; letter-spacing: 0.16em; text-transform: uppercase; }
+.text-caption { font-family: var(--font-sans); font-size: 13px; font-weight: 400; line-height: 1.45; }
+.text-code { font-family: var(--font-mono); font-size: 13px; font-weight: 500; line-height: 1.45; }

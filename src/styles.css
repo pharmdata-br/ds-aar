@@ -1,0 +1,5 @@
+/* AAR — importe uma vez no layout raiz: import '@pharmdata/aar-ds/styles.css' */
+@import './tokens/tokens.css';
+@import './styles/components.css';
+
+body { margin: 0; background: var(--ground); color: var(--ink); font-family: var(--font-sans); }
