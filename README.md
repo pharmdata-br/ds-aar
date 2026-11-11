@@ -1,4 +1,4 @@
-# aar-ds
+# ds-aar
 
 Design system do **AAR, Ambiente de Análise Regulatória**: tokens, componentes React e marca para o app de análise de bulas profissionais da Anvisa.
 
@@ -27,7 +27,7 @@ scripts/                 geração de tokens e checagem de renderização
 Enquanto o pacote não estiver num registro, instale direto do GitHub ou como workspace:
 
 ```bash
-npm install github:<conta>/aar-ds
+npm install github:pharmdata-br/ds-aar
 ```
 
 ```js
