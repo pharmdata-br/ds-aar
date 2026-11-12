@@ -13,6 +13,8 @@ export interface Finding {
   title: string;
   section: string;
   status: AnalysisStatus;
+  /** Estado nas palavras do contrato; substitui o rótulo padrão do status. */
+  statusLabel?: string;
 }
 
 export interface FindingListProps {
@@ -42,7 +44,7 @@ export function FindingList({ items, activeId, onSelect, onHover, label = 'Achad
               <p className="aar-fitem__title">{f.title}</p>
               <p className="aar-fitem__meta">{f.section}</p>
             </span>
-            <StatusTag status={f.status} size="sm" />
+            <StatusTag status={f.status} label={f.statusLabel} size="sm" />
           </button>
         </li>
       ))}

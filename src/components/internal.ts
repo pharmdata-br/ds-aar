@@ -1,4 +1,4 @@
-export type AnalysisStatus = 'conforme' | 'revisar' | 'divergente' | 'ausente' | 'analise';
+export type AnalysisStatus = 'conforme' | 'revisar' | 'divergente' | 'ausente' | 'analise' | 'nao-avaliado' | 'avaliado';
 export type AvatarTone = 'action' | 'inverse' | 'mist';
 
 export const STATUS: Record<AnalysisStatus, { icon: IconName | null; label: string }> = {
@@ -7,6 +7,8 @@ export const STATUS: Record<AnalysisStatus, { icon: IconName | null; label: stri
   divergente: { icon: 'diverge', label: 'Divergente' },
   ausente: { icon: 'absent', label: 'Ausente' },
   analise: { icon: null, label: 'Em análise' },
+  'nao-avaliado': { icon: 'minus', label: 'Não avaliado' },
+  avaliado: { icon: 'document', label: 'Avaliado' },
 };
 
 export type IconName =
