@@ -26,6 +26,41 @@
 .aar-dash__metric dt { font-size: 13px; font-weight: 500; color: var(--ink-soft); }
 .aar-dash__metric dd { font-size: clamp(24px, 3vw, 36px); letter-spacing: -.04em; font-weight: 600; margin: 0; line-height: 1.1; font-variant-numeric: tabular-nums; }
 .aar-dash__metric small { font-size: 12px; color: var(--ink-soft); line-height: 1.4; }
+/* Todos os cartões numa linha só, com menos respiro; em telas estreitas vale a grade normal. */
+@media (min-width: 761px) {
+  .aar-dash__metrics--row { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: var(--space-12); margin: var(--space-16) 0; }
+  .aar-dash__metrics--row .aar-dash__metric { padding: var(--space-12); gap: var(--space-4); }
+  .aar-dash__metrics--row .aar-dash__metric dd { font-size: clamp(18px, 2vw, 24px); overflow-wrap: anywhere; }
+}
+/* Navegação lateral fixa; em telas estreitas vira uma faixa no topo. */
+.aar-dash__layout { display: grid; grid-template-columns: 200px minmax(0, 1fr); max-width: 1200px; margin: auto; align-items: start; }
+.aar-dash:has(.aar-dash__layout) .aar-dash__nav { max-width: 1200px; }
+.aar-dash__side { position: sticky; top: var(--space-20); z-index: 1; display: flex; flex-direction: column; gap: var(--space-4); margin: var(--space-40) 0 0 var(--space-20); padding: var(--space-12); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-md); max-height: calc(100vh - 2 * var(--space-20)); overflow: auto; }
+.aar-dash__side a { padding: var(--space-4) var(--space-12); border-radius: var(--radius-sm); font-size: 13px; line-height: 1.45; color: var(--ink-soft); text-decoration: none; }
+.aar-dash__side a:hover, .aar-dash__side a[aria-current] { background: var(--mist); color: var(--action-deep); }
+.aar-dash__layout > * { min-width: 0; }
+.aar-dash__layout > .aar-dash__main { width: 100%; margin: 0; }
+.aar-dash__layout :is(.aar-dash__columns, .aar-dash__table, .aar-dash__pcdtgrid) + * { margin-top: var(--space-20); }
+.aar-dash__layout .aar-disclosure + .aar-dash__caption { margin-top: var(--space-12); }
+.aar-dash__layout :is(.aar-dash__columns, .aar-dash__table, .aar-dash__pcdtgrid) + .aar-dash__sectionhead, .aar-dash__layout .aar-dash__caption + .aar-dash__sectionhead, .aar-dash__layout .aar-dash__section + .aar-dash__filters { margin-top: var(--space-28); }
+.aar-dash__layout .aar-chart__text { font-size: 16px; }
+@media (min-width: 761px) { .aar-dash__layout .aar-dash__columns { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+/* Observações do gráfico: botão [i] no canto do cartão e texto flutuante. */
+.aar-dash__panel:has(> .aar-dash__info) { position: relative; }
+.aar-dash__panel:has(> .aar-dash__info) > .aar-dash__sectionhead { padding-right: var(--space-40); }
+.aar-dash__info { position: absolute; top: var(--space-16); right: var(--space-16); z-index: 2; }
+.aar-dash__info > summary { display: grid; place-items: center; width: 28px; height: 28px; border: 1px solid var(--line); border-radius: 50%; background: var(--surface); color: var(--action-deep); font: 600 13px var(--font-sans); cursor: pointer; list-style: none; }
+.aar-dash__info > summary::-webkit-details-marker { display: none; }
+.aar-dash__info > summary:hover, .aar-dash__info[open] > summary { background: var(--mist); border-color: var(--action); }
+.aar-dash__info > p { position: absolute; top: 100%; right: 0; width: max-content; max-width: 320px; margin: var(--space-4) 0 0; padding: var(--space-12) var(--space-16); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-md); font-size: 13px; line-height: 1.5; color: var(--ink); }
+.aar-dash__layout :is(.aar-dash__columns, .aar-disclosure) + .aar-disclosure { margin-top: var(--space-20); }
+.aar-dash__layout .aar-disclosure > .aar-dash__table { margin-top: var(--space-12); }
+.aar-dash__layout [id] { scroll-margin-top: var(--space-64); }
+@media (max-width: 1080px) {
+  .aar-dash__layout { grid-template-columns: minmax(0, 1fr); }
+  .aar-dash__side { flex-direction: row; top: 0; margin: 0; border-radius: 0; border-width: 0 0 1px; }
+  .aar-dash__side a { white-space: nowrap; }
+}
 .aar-dash__section { margin-top: var(--space-28); }
 .aar-dash__sectionhead { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-20); flex-wrap: wrap; margin: 0 0 var(--space-16); }
 .aar-dash__sectionhead h2 { font-size: 22px; letter-spacing: -.02em; margin: 0; }
