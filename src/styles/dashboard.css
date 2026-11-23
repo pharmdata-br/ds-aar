@@ -144,3 +144,23 @@
 .aar-dash__checkitem:last-child { border-bottom: 0; }
 .aar-dash__checkitem .aar-check { font-size: 13px; }
 .aar-dash__checkitem small { display: block; color: var(--ink-soft); }
+
+/* Densidade compacta: menos espaço vertical em todo o painel, para leitura de tabelas longas. Aplicar em <body class="aar aar-dash aar-dash--compacto">. */
+.aar-dash--compacto .aar-dash__main { padding: var(--space-20) var(--space-28) var(--space-40); }
+.aar-dash--compacto .aar-dash__hero { margin-bottom: var(--space-12); gap: var(--space-16); }
+.aar-dash--compacto .aar-dash__title { font-size: clamp(22px, 2.6vw, 32px); margin-bottom: var(--space-4); max-width: none; }
+.aar-dash--compacto .aar-dash__metrics { margin: var(--space-12) 0; gap: var(--space-8); }
+.aar-dash--compacto .aar-dash__metric { padding: var(--space-8) var(--space-12); gap: 0; }
+.aar-dash--compacto .aar-dash__metric dd { font-size: clamp(18px, 2vw, 22px); }
+.aar-dash--compacto .aar-dash__filters { padding: var(--space-12); margin-bottom: var(--space-12); }
+.aar-dash--compacto .aar-dash__field { gap: var(--space-4); }
+.aar-dash--compacto .aar-dash__field .aar-input { height: 34px; min-height: 34px; padding: var(--space-4) var(--space-8); font-size: 14px; }
+.aar-dash--compacto .aar-dash__filtergrid .aar-btn { height: 34px; padding: 0 var(--space-20); font-size: 14px; }
+.aar-dash--compacto .aar-dash__table table { font-size: 13px; line-height: 1.35; }
+.aar-dash--compacto .aar-dash__table th, .aar-dash--compacto .aar-dash__table td { padding: var(--space-4) var(--space-12); }
+.aar-dash--compacto .aar-dash__table tbody th { max-width: 420px; }
+.aar-dash--compacto .aar-dash__table small { display: inline; margin: 0 0 0 var(--space-4); }
+
+/* Tabela com cabeçalho sempre visível: a tabela rola dentro da própria área, limitada à altura da janela. */
+.aar-dash__table--cabecalho-fixo { max-height: calc(100vh - var(--space-40)); overflow: auto; overscroll-behavior: contain; }
+.aar-dash__table--cabecalho-fixo thead th { position: sticky; top: 0; z-index: 1; box-shadow: inset 0 -1px 0 var(--line); }
