@@ -209,8 +209,6 @@
 .aar-dash__popup--tela { width: calc(100vw - 2 * var(--space-20)); height: calc(100vh - 2 * var(--space-20)); max-height: none; display: none; flex-direction: column; gap: var(--space-8); }
 .aar-dash__popup--tela:popover-open { display: flex; }
 .aar-dash__popup--tela iframe { flex: 1; width: 100%; border: 0; }
-.aar-dash__rolagem { display: flex; justify-content: flex-start; align-items: center; gap: var(--space-8); padding: var(--space-4) 0 var(--space-8); font-size: 12px; color: var(--ink-soft); }
-.aar-dash__rolagem + .aar-dash__table--cabecalho-fixo { max-height: calc(100vh - 64px); }
 .aar-dash__popuphead { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-16); margin-bottom: var(--space-12); }
 .aar-dash__popuphead h2 { font-size: 18px; margin: 0; }
 .aar-dash__popup .aar-dash__table { max-height: none; }
