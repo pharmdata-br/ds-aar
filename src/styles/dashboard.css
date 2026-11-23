@@ -72,6 +72,7 @@
 .aar-dash__sectionhead p { margin: 0; font-size: 13px; color: var(--ink-soft); }
 .aar-dash__panel { padding: var(--space-20); border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--surface); min-width: 0; }
 .aar-dash__columns { display: grid; grid-template-columns: 1.4fr 1fr; gap: var(--space-20); margin-top: var(--space-28); }
+.aar-dash__columns--iguais { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .aar-dash__uflist { display: flex; flex-wrap: wrap; gap: var(--space-8); }
 .aar-dash__uf { display: inline-flex; gap: var(--space-12); align-items: center; font-size: 13px; padding: var(--space-8) var(--space-12); border: 1px solid var(--line); border-radius: var(--radius-sm); text-decoration: none; color: var(--ink-soft); background: var(--surface); }
 .aar-dash__uf:hover, .aar-dash__uf[aria-current="true"] { background: var(--mist); border-color: var(--action); color: var(--action-deep); }
