@@ -164,3 +164,28 @@
 /* Tabela com cabeçalho sempre visível: a tabela rola dentro da própria área, limitada à altura da janela. */
 .aar-dash__table--cabecalho-fixo { max-height: calc(100vh - var(--space-40)); overflow: auto; overscroll-behavior: contain; }
 .aar-dash__table--cabecalho-fixo thead th { position: sticky; top: 0; z-index: 1; box-shadow: inset 0 -1px 0 var(--line); }
+
+/* Densidade compacta na página com navegação lateral (seções, cartões e PCDTs). */
+.aar-dash--compacto .aar-dash__section { margin-top: var(--space-16); }
+.aar-dash--compacto .aar-dash__sectionhead { margin-bottom: var(--space-8); }
+.aar-dash--compacto .aar-dash__sectionhead h2 { font-size: 18px; }
+.aar-dash--compacto .aar-dash__panel { padding: var(--space-12); }
+.aar-dash--compacto .aar-dash__columns { gap: var(--space-12); margin-top: var(--space-12); }
+.aar-dash--compacto .aar-dash__pcdtgrid { gap: var(--space-8); }
+.aar-dash--compacto .aar-dash__pcdt { gap: var(--space-4); }
+.aar-dash--compacto .aar-dash__pcdt h3 { font-size: 15px; }
+.aar-dash--compacto .aar-dash__metric small { line-height: 1.3; }
+.aar-dash--compacto .aar-dash__side { margin-top: var(--space-20); }
+.aar-dash--compacto .aar-dash__layout :is(.aar-dash__columns, .aar-dash__table, .aar-dash__pcdtgrid) + * { margin-top: var(--space-8); }
+.aar-dash--compacto .aar-dash__layout :is(.aar-dash__columns, .aar-disclosure) + .aar-disclosure { margin-top: var(--space-8); }
+
+/* Popup (atributo HTML popover, sem JavaScript): conteúdo extenso, como uma tabela, aberto sobre a página.
+   <button class="aar-dash__popuplink" popovertarget="x">…</button><div class="aar-dash__popup" id="x" popover>…</div> */
+.aar-dash__popuplink { padding: 0; border: 0; background: none; font: 600 14px var(--font-sans); color: var(--action); cursor: pointer; text-align: left; }
+.aar-dash__popuplink:hover { text-decoration: underline; }
+.aar-dash__popup { width: min(1100px, calc(100vw - 2 * var(--space-20))); max-height: calc(100vh - 2 * var(--space-40)); overflow: auto; padding: var(--space-16) var(--space-20); border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--surface); color: var(--ink); font-family: var(--font-sans); box-shadow: var(--shadow-panel); }
+.aar-dash__popup::backdrop { background: color-mix(in srgb, var(--ink) 32%, transparent); }
+.aar-dash__popuphead { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-16); margin-bottom: var(--space-12); }
+.aar-dash__popuphead h2 { font-size: 18px; margin: 0; }
+.aar-dash__popup .aar-dash__table { max-height: none; }
+.aar-dash__popup .aar-dash__table thead th { position: sticky; top: calc(-1 * var(--space-16)); z-index: 1; }
