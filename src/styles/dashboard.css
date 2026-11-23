@@ -6,6 +6,7 @@
 .aar-dash__brand { display: inline-flex; align-items: center; gap: var(--space-12); text-decoration: none; color: var(--ink); font-weight: 700; font-size: 22px; letter-spacing: -.03em; }
 .aar-dash__brand img { width: 32px; height: 32px; }
 .aar-dash__brand small { font-size: 12px; font-weight: 500; letter-spacing: .02em; color: var(--ink-soft); border-left: 1px solid var(--line); padding-left: var(--space-12); }
+.aar-dash__usuario { font-size: 13px; font-weight: 500; color: var(--ink-soft); padding: var(--space-4) var(--space-12); border: 1px solid var(--line); border-radius: 999px; }
 .aar-dash__main { max-width: 1440px; margin: auto; padding: var(--space-40) var(--space-40) var(--space-64); }
 .aar-dash__hero { display: flex; align-items: end; justify-content: space-between; gap: var(--space-28); margin-bottom: var(--space-28); }
 .aar-dash__eyebrow { color: var(--action-deep); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; margin: 0 0 var(--space-12); }
