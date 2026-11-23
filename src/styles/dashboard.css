@@ -82,7 +82,7 @@
 .aar-dash__table a { color: var(--action-deep); text-decoration: none; }
 .aar-dash__table a:hover { text-decoration: underline; }
 .aar-dash__table small { display: block; font-size: 12px; color: var(--ink-soft); font-weight: 400; margin-top: var(--space-4); line-height: 1.45; }
-.aar-dash__number { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.aar-dash__number { font-variant-numeric: tabular-nums; white-space: nowrap; text-align: right; }
 .aar-dash__status { display: inline-flex; font-size: 11px; font-weight: 500; color: var(--warning); background: var(--warning-soft); padding: var(--space-4) var(--space-8); border-radius: var(--radius-pill); }
 .aar-dash__status--neutral { color: var(--ink-soft); background: var(--ground); }
 .aar-dash__status--verified { color: var(--positive); background: var(--positive-soft); }
@@ -116,6 +116,10 @@
 .aar-chart__range { fill: var(--mist); }
 .aar-chart__median { stroke: var(--action); stroke-width: 2; stroke-dasharray: 5 4; }
 .aar-chart__line { stroke: var(--action); stroke-width: 2; fill: none; }
+.aar-chart__spark-cel { display: inline-flex; align-items: center; gap: var(--space-8); }
+.aar-chart__spark { width: 64px; height: 20px; flex: none; overflow: visible; }
+.aar-chart__spark .aar-chart__line { stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+.aar-chart__spark .aar-chart__point { opacity: 1; stroke: none; }
 .aar-chart__bar { fill: var(--action); opacity: .8; }
 .aar-chart__bar:hover { fill: var(--action-deep); opacity: 1; }
 .aar-dash a:focus-visible, .aar-dash button:focus-visible, .aar-dash input:focus-visible, .aar-dash select:focus-visible, .aar-dash summary:focus-visible { outline: 2px solid var(--action); outline-offset: 3px; }
@@ -161,6 +165,9 @@
 .aar-dash--compacto .aar-dash__table th, .aar-dash--compacto .aar-dash__table td { padding: var(--space-4) var(--space-12); }
 .aar-dash--compacto .aar-dash__table tbody th { max-width: 420px; }
 .aar-dash--compacto .aar-dash__table small { display: inline; margin: 0 0 0 var(--space-4); }
+.aar-dash--compacto .aar-dash__table--linha-auxiliar small { display: block; margin: 2px 0 0; color: var(--ink-soft); }
+.aar-dash__table--linha-auxiliar th[scope="row"] { max-width: 36ch; }
+.aar-dash__table--linha-auxiliar .aar-dash__vazio { color: var(--line-pending); }
 
 /* Tabela com cabeçalho sempre visível: a tabela rola dentro da própria área, limitada à altura da janela. */
 .aar-dash__table--cabecalho-fixo { max-height: calc(100vh - var(--space-40)); overflow: auto; overscroll-behavior: contain; }
