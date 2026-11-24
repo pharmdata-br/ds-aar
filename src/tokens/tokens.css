@@ -68,16 +68,16 @@
   --radius-xl: 28px;
   --radius-2xl: 32px;
   --radius-pill: 999px;
-  --font-sans: var(--font-inter-tight, "Inter Tight"), Inter, system-ui, sans-serif;
-  --font-serif: var(--font-instrument-serif, "Instrument Serif"), Georgia, serif;
-  --font-mono: ui-monospace, Menlo, Consolas, monospace;
+  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+  --font-serif: "EB Garamond", Georgia, serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
 }
-.text-display-xl { font-family: var(--font-sans); font-size: 88px; font-weight: 700; line-height: 0.98; letter-spacing: -0.035em; }
-.text-display { font-family: var(--font-sans); font-size: 64px; font-weight: 700; line-height: 1; letter-spacing: -0.035em; }
-.text-heading-1 { font-family: var(--font-sans); font-size: 56px; font-weight: 700; line-height: 1.02; letter-spacing: -0.035em; }
-.text-heading-2 { font-family: var(--font-sans); font-size: 48px; font-weight: 700; line-height: 1.05; letter-spacing: -0.03em; }
-.text-title { font-family: var(--font-sans); font-size: 32px; font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; }
-.text-title-sm { font-family: var(--font-sans); font-size: 22px; font-weight: 700; line-height: 1.35; }
+.text-display-xl { font-family: var(--font-serif); font-size: 88px; font-weight: 700; line-height: 0.98; letter-spacing: -0.035em; }
+.text-display { font-family: var(--font-serif); font-size: 64px; font-weight: 700; line-height: 1; letter-spacing: -0.035em; }
+.text-heading-1 { font-family: var(--font-serif); font-size: 56px; font-weight: 700; line-height: 1.02; letter-spacing: -0.035em; }
+.text-heading-2 { font-family: var(--font-serif); font-size: 48px; font-weight: 700; line-height: 1.05; letter-spacing: -0.03em; }
+.text-title { font-family: var(--font-serif); font-size: 32px; font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; }
+.text-title-sm { font-family: var(--font-serif); font-size: 22px; font-weight: 700; line-height: 1.35; }
 .text-emphasis { font-family: var(--font-serif); font-size: 48px; font-weight: 400; line-height: 1.05; font-style: italic; }
 .text-body-lg { font-family: var(--font-sans); font-size: 21px; font-weight: 400; line-height: 1.5; }
 .text-body { font-family: var(--font-sans); font-size: 17px; font-weight: 400; line-height: 1.55; }

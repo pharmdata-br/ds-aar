@@ -11,7 +11,7 @@
 .aar-dash__hero { display: flex; align-items: end; justify-content: space-between; gap: var(--space-28); margin-bottom: var(--space-28); }
 .aar-dash__eyebrow { color: var(--action-deep); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; margin: 0 0 var(--space-12); }
 .aar-dash__title { font-size: clamp(30px, 4vw, 52px); line-height: 1.07; font-weight: 600; letter-spacing: -.035em; margin: 0 0 var(--space-16); max-width: 28ch; }
-.aar-dash__subtitle { font-size: 16px; line-height: 1.5; color: var(--ink-soft); max-width: 76ch; margin: 0; }
+.aar-dash__subtitle { font-size: 15px; line-height: 1.5; color: var(--ink-soft); max-width: 76ch; margin: 0; }
 .aar-dash__stamp { flex-shrink: 0; font-size: 13px; line-height: 1.6; color: var(--ink-soft); text-align: right; }
 .aar-dash__filters { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: var(--space-20); margin-bottom: var(--space-28); }
 .aar-dash__filtergrid { display: grid; grid-template-columns: 2fr 1.25fr 1fr 1fr 1fr auto; gap: var(--space-12); align-items: end; }
@@ -68,7 +68,7 @@
 }
 .aar-dash__section { margin-top: var(--space-28); }
 .aar-dash__sectionhead { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-20); flex-wrap: wrap; margin: 0 0 var(--space-16); }
-.aar-dash__sectionhead h2 { font-size: 22px; letter-spacing: -.02em; margin: 0; }
+.aar-dash__sectionhead h2 { font-size: 22px; font-weight: 700; letter-spacing: -.02em; margin: 0; }
 .aar-dash__sectionhead p { margin: 0; font-size: 13px; color: var(--ink-soft); }
 .aar-dash__panel { padding: var(--space-20); border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--surface); min-width: 0; }
 .aar-dash__columns { display: grid; grid-template-columns: 1.4fr 1fr; gap: var(--space-20); margin-top: var(--space-28); }
@@ -108,7 +108,9 @@
 .aar-dash__empty p { max-width: 70ch; font-size: 15px; color: var(--ink-soft); line-height: 1.6; }
 .aar-dash__footer { border-top: 1px solid var(--line); padding-top: var(--space-20); margin-top: var(--space-40); color: var(--ink-soft); font-size: 12px; line-height: 1.7; }
 .aar-dash__pagination { display: flex; align-items: center; gap: var(--space-12); justify-content: space-between; margin-top: var(--space-16); font-size: 13px; color: var(--ink-soft); }
-.aar-dash__caption { font-size: 12px; line-height: 1.6; color: var(--ink-soft); }
+.aar-dash__caption { font-size: 13px; line-height: 1.6; color: var(--ink-soft); }
+.aar-dash__panel figcaption strong { font-size: 15px; font-weight: 600; }
+.aar-dash__panel .aar-dash__sectionhead h2, .aar-dash--compacto .aar-dash__panel .aar-dash__sectionhead h2 { font-family: var(--font-sans); font-size: 15px; font-weight: 600; letter-spacing: 0; }
 .aar-dash__caption a { color: var(--action-deep); }
 .aar-dash__money { white-space: nowrap; font-variant-numeric: tabular-nums; }
 .aar-chart { display: block; width: 100%; height: auto; overflow: visible; }
@@ -171,7 +173,7 @@
 /* Densidade compacta: menos espaço vertical em todo o painel, para leitura de tabelas longas. Aplicar em <body class="aar aar-dash aar-dash--compacto">. */
 .aar-dash--compacto .aar-dash__main { padding: var(--space-20) var(--space-28) var(--space-40); }
 .aar-dash--compacto .aar-dash__hero { margin-bottom: var(--space-12); gap: var(--space-16); }
-.aar-dash--compacto .aar-dash__title { font-size: clamp(22px, 2.6vw, 32px); margin-bottom: var(--space-4); max-width: none; }
+.aar-dash--compacto .aar-dash__title { font-size: clamp(26px, 3vw, 32px); font-weight: 700; margin-bottom: var(--space-4); max-width: none; }
 .aar-dash--compacto .aar-dash__metrics { margin: var(--space-12) 0; gap: var(--space-8); }
 .aar-dash--compacto .aar-dash__metric { padding: var(--space-8) var(--space-12); gap: 0; }
 .aar-dash--compacto .aar-dash__metric dd { font-size: clamp(18px, 2vw, 22px); }
@@ -194,7 +196,7 @@
 /* Densidade compacta na página com navegação lateral (seções, cartões e PCDTs). */
 .aar-dash--compacto .aar-dash__section { margin-top: var(--space-16); }
 .aar-dash--compacto .aar-dash__sectionhead { margin-bottom: var(--space-8); }
-.aar-dash--compacto .aar-dash__sectionhead h2 { font-size: 18px; }
+.aar-dash--compacto .aar-dash__sectionhead h2 { font-size: 22px; }
 .aar-dash--compacto .aar-dash__panel { padding: var(--space-12); }
 .aar-dash--compacto .aar-dash__columns { gap: var(--space-12); margin-top: var(--space-12); }
 .aar-dash--compacto .aar-dash__pcdtgrid { gap: var(--space-8); }
