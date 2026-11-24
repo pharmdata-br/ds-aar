@@ -37,6 +37,11 @@ html { scroll-padding-top: calc(var(--aar-masthead-h) + var(--space-16)); }
 }
 /* Navegação lateral fixa; em telas estreitas vira uma faixa no topo. */
 .aar-dash__layout { display: grid; grid-template-columns: 200px minmax(0, 1fr); max-width: 1200px; margin: auto; align-items: start; }
+.aar-dash__menu { display: flex; gap: var(--space-4); margin: 0; padding: 0; list-style: none; flex-wrap: wrap; }
+.aar-dash__menu a { display: block; padding: var(--space-8) var(--space-12); border-radius: 6px; color: var(--ink-soft); font-size: 14px; font-weight: 500; text-decoration: none; }
+.aar-dash__menu a:hover { color: var(--ink); background: var(--line-soft); }
+.aar-dash__menu a[aria-current="page"] { color: var(--ink); font-weight: 600; box-shadow: inset 0 -2px 0 var(--action); border-radius: 0; }
+.aar-dash__menu a:focus-visible { outline: 2px solid var(--action); outline-offset: 2px; }
 .aar-dash:has(.aar-dash__layout) .aar-dash__nav { max-width: 1200px; }
 .aar-dash__side { position: sticky; top: calc(var(--aar-masthead-h) + var(--space-20)); z-index: 1; display: flex; flex-direction: column; gap: var(--space-4); margin: var(--space-40) 0 0 var(--space-20); padding: var(--space-12); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-md); max-height: calc(100vh - var(--aar-masthead-h) - 2 * var(--space-20)); overflow: auto; }
 .aar-dash__side a { padding: var(--space-4) var(--space-12); border-radius: var(--radius-sm); font-size: 13px; line-height: 1.45; color: var(--ink-soft); text-decoration: none; }
@@ -236,3 +241,7 @@ html { scroll-padding-top: calc(var(--aar-masthead-h) + var(--space-16)); }
 .aar-dash__dica:hover { background: var(--mist); border-color: var(--action); }
 .aar-dash__popover { max-width: 360px; margin: 0; padding: var(--space-12) var(--space-16); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-md); box-shadow: var(--shadow-panel); font: 400 13px/1.5 var(--font-sans); color: var(--ink); }
 @supports (anchor-name: --a) { .aar-dash__popover { inset: auto; top: anchor(bottom); left: anchor(left); margin-top: var(--space-4); position-try-fallbacks: flip-block; } }
+.aar-dash__ordena { color: inherit; text-decoration: none; }
+.aar-dash__ordena:hover { color: var(--action); text-decoration: underline; }
+.aar-dash__dica-col { width: 1%; padding-inline: 0; text-align: center; }
+.aar-dash__dica-col .aar-dash__dica { margin-left: 0; }
