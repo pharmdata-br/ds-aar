@@ -1,7 +1,9 @@
 /* AAR — panorama e painel analítico. Componentes usam a paleta e os tokens canônicos. */
 .aar-dash { color: var(--ink); font-family: var(--font-sans); }
 .aar-dash * { box-sizing: border-box; }
-.aar-dash__masthead { background: var(--surface); border-bottom: 1px solid var(--line); }
+:root { --aar-masthead-h: 72px; }
+html { scroll-padding-top: calc(var(--aar-masthead-h) + var(--space-16)); }
+.aar-dash__masthead { position: sticky; top: 0; z-index: 10; background: var(--surface); border-bottom: 1px solid var(--line); }
 .aar-dash__nav { max-width: 1440px; margin: auto; padding: var(--space-20) var(--space-40); display: flex; align-items: center; justify-content: space-between; gap: var(--space-20); flex-wrap: wrap; }
 .aar-dash__brand { display: inline-flex; align-items: center; gap: var(--space-12); text-decoration: none; color: var(--ink); font-weight: 700; font-size: 22px; letter-spacing: -.03em; }
 .aar-dash__brand img { width: 32px; height: 32px; }
@@ -36,7 +38,7 @@
 /* Navegação lateral fixa; em telas estreitas vira uma faixa no topo. */
 .aar-dash__layout { display: grid; grid-template-columns: 200px minmax(0, 1fr); max-width: 1200px; margin: auto; align-items: start; }
 .aar-dash:has(.aar-dash__layout) .aar-dash__nav { max-width: 1200px; }
-.aar-dash__side { position: sticky; top: var(--space-20); z-index: 1; display: flex; flex-direction: column; gap: var(--space-4); margin: var(--space-40) 0 0 var(--space-20); padding: var(--space-12); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-md); max-height: calc(100vh - 2 * var(--space-20)); overflow: auto; }
+.aar-dash__side { position: sticky; top: calc(var(--aar-masthead-h) + var(--space-20)); z-index: 1; display: flex; flex-direction: column; gap: var(--space-4); margin: var(--space-40) 0 0 var(--space-20); padding: var(--space-12); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-md); max-height: calc(100vh - var(--aar-masthead-h) - 2 * var(--space-20)); overflow: auto; }
 .aar-dash__side a { padding: var(--space-4) var(--space-12); border-radius: var(--radius-sm); font-size: 13px; line-height: 1.45; color: var(--ink-soft); text-decoration: none; }
 .aar-dash__side a:hover, .aar-dash__side a[aria-current] { background: var(--mist); color: var(--action-deep); }
 .aar-dash__layout > * { min-width: 0; }
@@ -191,7 +193,7 @@
 
 /* Tabela com cabeçalho sempre visível: a tabela rola dentro da própria área, limitada à altura da janela. */
 .aar-dash__table--cabecalho-fixo { max-height: calc(100vh - var(--space-40)); overflow: auto; overscroll-behavior: contain; }
-.aar-dash__table--cabecalho-fixo thead th { position: sticky; top: 0; z-index: 1; box-shadow: inset 0 -1px 0 var(--line); }
+.aar-dash__table--cabecalho-fixo thead th { position: sticky; top: var(--aar-masthead-h); z-index: 1; box-shadow: inset 0 -1px 0 var(--line); }
 
 /* Densidade compacta na página com navegação lateral (seções, cartões e PCDTs). */
 .aar-dash--compacto .aar-dash__section { margin-top: var(--space-16); }
