@@ -192,8 +192,8 @@ html { scroll-padding-top: calc(var(--aar-masthead-h) + var(--space-16)); }
 .aar-dash__table--linha-auxiliar .aar-dash__vazio { color: var(--line-pending); }
 
 /* Tabela com cabeçalho sempre visível: a tabela rola dentro da própria área, limitada à altura da janela. */
-.aar-dash__table--cabecalho-fixo { max-height: calc(100vh - var(--space-40)); overflow: auto; overscroll-behavior: contain; }
-.aar-dash__table--cabecalho-fixo thead th { position: sticky; top: var(--aar-masthead-h); z-index: 1; box-shadow: inset 0 -1px 0 var(--line); }
+.aar-dash__table--cabecalho-fixo { max-height: calc(100vh - var(--aar-masthead-h) - var(--space-40)); overflow: auto; overscroll-behavior: contain; }
+.aar-dash__table--cabecalho-fixo thead th { position: sticky; top: 0; z-index: 1; box-shadow: inset 0 -1px 0 var(--line); }
 
 /* Densidade compacta na página com navegação lateral (seções, cartões e PCDTs). */
 .aar-dash--compacto .aar-dash__section { margin-top: var(--space-16); }
@@ -230,3 +230,8 @@ html { scroll-padding-top: calc(var(--aar-masthead-h) + var(--space-16)); }
 .aar-dash__popuphead h2 { font-size: 18px; margin: 0; }
 .aar-dash__popup .aar-dash__table { max-height: none; }
 .aar-dash__popup .aar-dash__table thead th { position: sticky; top: calc(-1 * var(--space-16)); z-index: 1; }
+/* Dica em linha (popover nativo, camada superior: não é cortada por tabela com rolagem) */
+.aar-dash__dica { display: inline-grid; place-items: center; width: 20px; height: 20px; margin-left: var(--space-8); padding: 0; vertical-align: middle; border: 1px solid var(--line); border-radius: 50%; background: var(--surface); color: var(--action-deep); font: 600 12px var(--font-sans); cursor: pointer; }
+.aar-dash__dica:hover { background: var(--mist); border-color: var(--action); }
+.aar-dash__popover { max-width: 360px; margin: 0; padding: var(--space-12) var(--space-16); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-md); box-shadow: var(--shadow-panel); font: 400 13px/1.5 var(--font-sans); color: var(--ink); }
+@supports (anchor-name: --a) { .aar-dash__popover { inset: auto; top: anchor(bottom); left: anchor(left); margin-top: var(--space-4); position-try-fallbacks: flip-block; } }
