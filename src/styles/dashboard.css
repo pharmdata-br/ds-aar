@@ -112,7 +112,8 @@ html { scroll-padding-top: calc(var(--aar-masthead-h) + var(--space-16)); }
 .aar-dash__pagination { display: flex; align-items: center; gap: var(--space-12); justify-content: space-between; margin-top: var(--space-16); font-size: 13px; color: var(--ink-soft); }
 .aar-dash__caption { font-size: 13px; line-height: 1.6; color: var(--ink-soft); }
 .aar-dash__panel figcaption strong { font-size: 15px; font-weight: 600; }
-.aar-dash__panel .aar-dash__sectionhead h2, .aar-dash--compacto .aar-dash__panel .aar-dash__sectionhead h2 { font-family: var(--font-sans); font-size: 15px; font-weight: 600; letter-spacing: 0; }
+.aar-dash__sectionhead h3 { font-family: var(--font-sans); font-size: 17px; font-weight: 600; margin: 0; }
+.aar-dash__panel .aar-dash__sectionhead :is(h2, h3), .aar-dash--compacto .aar-dash__panel .aar-dash__sectionhead :is(h2, h3) { font-family: var(--font-sans); font-size: 15px; font-weight: 600; letter-spacing: 0; }
 .aar-dash__caption a { color: var(--action-deep); }
 .aar-dash__money { white-space: nowrap; font-variant-numeric: tabular-nums; }
 .aar-chart { display: block; width: 100%; height: auto; overflow: visible; }
