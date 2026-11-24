@@ -245,3 +245,7 @@ html { scroll-padding-top: calc(var(--aar-masthead-h) + var(--space-16)); }
 .aar-dash__ordena:hover { color: var(--action); text-decoration: underline; }
 .aar-dash__dica-col { width: 1%; padding-inline: 0; text-align: center; }
 .aar-dash__dica-col .aar-dash__dica { margin-left: 0; }
+.aar-dash__abre { all: unset; cursor: pointer; color: var(--action-deep); font-weight: inherit; }
+.aar-dash__abre:hover { text-decoration: underline; }
+.aar-dash__abre:focus-visible { outline: 2px solid var(--action); outline-offset: 2px; }
+.aar-dash__popup--amplo { width: 70vw; height: 70vh; max-height: none; }
