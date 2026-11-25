@@ -87,7 +87,7 @@ html { scroll-padding-top: calc(var(--aar-masthead-h) + var(--space-16)); }
 .aar-dash__table { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--surface); }
 .aar-dash__table table { border-collapse: collapse; width: 100%; font-size: 14px; line-height: 1.45; }
 .aar-dash__table th, .aar-dash__table td { text-align: left; padding: var(--space-16) var(--space-20); border-bottom: 1px solid var(--line-soft); vertical-align: top; }
-.aar-dash__table thead th { color: var(--ink-soft); background: var(--ground); font-size: 11px; letter-spacing: .07em; text-transform: uppercase; font-weight: 600; white-space: nowrap; }
+.aar-dash__table thead th { color: var(--ink); background: var(--mist); font-size: 11px; letter-spacing: .07em; text-transform: uppercase; font-weight: 600; white-space: nowrap; }
 .aar-dash__table tbody th { min-width: 230px; max-width: 340px; }
 .aar-dash__table tr:last-child td, .aar-dash__table tr:last-child th { border-bottom: 0; }
 .aar-dash__table tbody tr:hover { background: var(--ground); }
@@ -249,3 +249,23 @@ html { scroll-padding-top: calc(var(--aar-masthead-h) + var(--space-16)); }
 .aar-dash__abre:hover { text-decoration: underline; }
 .aar-dash__abre:focus-visible { outline: 2px solid var(--action); outline-offset: 2px; }
 .aar-dash__popup--amplo { width: 70vw; height: 70vh; max-height: none; }
+
+/* Tooltip informativo: elemento com data-dica e tabindex="0"; um único balão fixo (.aar-dash__tipbox), posicionado por script, fica acima de cards e tabelas com rolagem. */
+.aar-dash__tip { cursor: help; }
+.aar-dash__tipbox { position: fixed; z-index: 50; max-width: 300px; padding: var(--space-8) var(--space-12); background: var(--ink); color: var(--surface); border-radius: var(--radius-md); font: 400 12px/1.45 var(--font-sans); box-shadow: var(--shadow-panel); pointer-events: none; }
+.aar-dash__tipbox[hidden] { display: none; }
+
+/* Tabela em dois níveis: linha do VMP e, abaixo, uma linha por unidade de aquisição. */
+.aar-dash__table tr.aar-dash__unidade :is(th, td) { padding-top: var(--space-4); padding-bottom: var(--space-4); border-top: 0; border-bottom: 0; font-size: 13px; }
+.aar-dash__table tr.aar-dash__unidade th { padding-left: var(--space-40); font-weight: 400; }
+.aar-dash__icones { white-space: nowrap; }
+.aar-dash__table tr.aar-dash__vmp + tr.aar-dash__unidade :is(th, td) { border-top: 0; }
+.aar-dash__table tr.aar-dash__vmp :is(th, td) { background: color-mix(in srgb, var(--mist) 40%, var(--surface)); border-top: 0.5px solid var(--line); border-bottom: 0; }
+
+/* Escolhas em lista (telas de ajuste): botões e itens escolhidos empilhados, sem marcadores. */
+.aar-dash__escolhas { list-style: none; margin: 0 0 var(--space-4); padding: 0; display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-4); }
+.aar-dash__escolhido { font-weight: 600; }
+.aar-dash__escolhas .aar-btn { white-space: normal; text-align: left; height: auto; }
+
+/* Coluna de valor monetário: alinhada à direita, algarismos de largura fixa. */
+.aar-dash__table .aar-dash__valor { text-align: right; font-variant-numeric: tabular-nums; }
