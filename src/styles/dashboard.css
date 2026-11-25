@@ -38,7 +38,7 @@ html { scroll-padding-top: calc(var(--aar-masthead-h) + var(--space-16)); }
 /* Navegação lateral fixa; em telas estreitas vira uma faixa no topo. */
 .aar-dash__layout { display: grid; grid-template-columns: 200px minmax(0, 1fr); max-width: 1200px; margin: auto; align-items: start; }
 .aar-dash__menu { display: flex; gap: var(--space-4); margin: 0; padding: 0; list-style: none; flex-wrap: wrap; }
-.aar-dash__menu a { display: block; padding: var(--space-8) var(--space-12); border-radius: 6px; color: var(--ink-soft); font-size: 14px; font-weight: 500; text-decoration: none; }
+.aar-dash__menu a { display: block; padding: var(--space-8) var(--space-8); border-radius: 6px; color: var(--ink-soft); font-size: 14px; font-weight: 500; text-decoration: none; }
 .aar-dash__menu a:hover { color: var(--ink); background: var(--line-soft); }
 .aar-dash__menu a[aria-current="page"] { color: var(--ink); font-weight: 600; box-shadow: inset 0 -2px 0 var(--action); border-radius: 0; }
 .aar-dash__menu a:focus-visible { outline: 2px solid var(--action); outline-offset: 2px; }
@@ -121,7 +121,10 @@ html { scroll-padding-top: calc(var(--aar-masthead-h) + var(--space-16)); }
 .aar-dash__panel .aar-dash__sectionhead :is(h2, h3), .aar-dash--compacto .aar-dash__panel .aar-dash__sectionhead :is(h2, h3) { font-family: var(--font-sans); font-size: 15px; font-weight: 600; letter-spacing: 0; }
 .aar-dash__caption a { color: var(--action-deep); }
 .aar-dash__money { white-space: nowrap; font-variant-numeric: tabular-nums; }
-.aar-chart { display: block; width: 100%; height: auto; overflow: visible; }
+/* Gráfico nunca maior que o desenho: a largura do SVG (atributo width = largura do viewBox) é o máximo; em tela menor, encolhe.
+   Assim o texto do gráfico fica na escala da página, onde quer que o gráfico seja colocado. */
+.aar-chart { display: block; max-width: 100%; height: auto; overflow: visible; }
+.aar-dash__popup .aar-chart, .aar-dash__zoom .aar-chart { width: 100%; }
 .aar-chart__grid { stroke: var(--line-soft); stroke-width: 1; }
 .aar-chart__axis { stroke: var(--line); stroke-width: 1; }
 .aar-chart__text { fill: var(--ink-soft); font: 12px var(--font-sans); }
@@ -301,3 +304,8 @@ html { scroll-padding-top: calc(var(--aar-masthead-h) + var(--space-16)); }
 .aar-dash__abertura p:last-child { margin: 0; }
 /* Cabeçalhos alinhados pela base quando alguns quebram em duas linhas. */
 .aar-dash__table thead th { vertical-align: bottom; }
+.aar-dash__regua .aar-chart__label.aar-regua__sub { font-weight: 400; }
+/* Tabelas dentro de janelas: densas, espaçamento menor (mesmo critério em todas as janelas). */
+.aar-dash__popup .aar-dash__table :is(th, td) { padding: var(--space-8) var(--space-8); overflow-wrap: anywhere; }
+.aar-chart .aar-regua__ref { stroke: var(--ink-soft); stroke-width: 1.5; stroke-dasharray: 2 4; }
+.aar-chart .aar-regua__ref-txt { fill: var(--ink-soft); font-size: 13px; }
