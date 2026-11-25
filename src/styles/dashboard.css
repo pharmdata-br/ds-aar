@@ -299,3 +299,5 @@ html { scroll-padding-top: calc(var(--aar-masthead-h) + var(--space-16)); }
 .aar-dash__abertura { margin: 0 0 var(--space-20); padding: var(--space-16) var(--space-20); border-left: 3px solid var(--action); background: var(--surface); border-radius: var(--radius-md); font-size: 17px; line-height: 1.55; max-width: 78ch; }
 .aar-dash__abertura p { margin: 0 0 var(--space-8); }
 .aar-dash__abertura p:last-child { margin: 0; }
+/* Cabeçalhos alinhados pela base quando alguns quebram em duas linhas. */
+.aar-dash__table thead th { vertical-align: bottom; }
