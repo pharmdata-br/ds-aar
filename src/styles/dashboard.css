@@ -309,3 +309,6 @@ html { scroll-padding-top: calc(var(--aar-masthead-h) + var(--space-16)); }
 .aar-dash__popup .aar-dash__table :is(th, td) { padding: var(--space-8) var(--space-8); overflow-wrap: anywhere; }
 .aar-chart .aar-regua__ref { stroke: var(--ink-soft); stroke-width: 1.5; stroke-dasharray: 2 4; }
 .aar-chart .aar-regua__ref-txt { fill: var(--ink-soft); font-size: 13px; }
+.aar-chart .aar-chart__line--novo { stroke: var(--ink); }
+.aar-chart .aar-chart__point--novo { fill: var(--ink); }
+.aar-chart.aar-chart--legenda { display: inline-block; vertical-align: middle; }
