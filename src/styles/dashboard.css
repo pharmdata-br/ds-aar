@@ -94,7 +94,7 @@ html { scroll-padding-top: calc(var(--aar-masthead-h) + var(--space-16)); }
 .aar-dash__table a { color: var(--action-deep); text-decoration: none; }
 .aar-dash__table a:hover { text-decoration: underline; }
 .aar-dash__table small { display: block; font-size: 12px; color: var(--ink-soft); font-weight: 400; margin-top: var(--space-4); line-height: 1.45; }
-.aar-dash__number { font-variant-numeric: tabular-nums; white-space: nowrap; text-align: right; }
+.aar-dash__number, .aar-dash__table .aar-dash__number { font-variant-numeric: tabular-nums; white-space: nowrap; text-align: right; }
 .aar-dash__status { display: inline-flex; font-size: 11px; font-weight: 500; color: var(--warning); background: var(--warning-soft); padding: var(--space-4) var(--space-8); border-radius: var(--radius-pill); }
 .aar-dash__status--neutral { color: var(--ink-soft); background: var(--ground); }
 .aar-dash__status--verified { color: var(--positive); background: var(--positive-soft); }
@@ -284,7 +284,7 @@ html { scroll-padding-top: calc(var(--aar-masthead-h) + var(--space-16)); }
 .aar-chart .aar-regua__teto { stroke: var(--negative); stroke-width: 1.5; stroke-dasharray: 5 4; }
 .aar-chart .aar-regua__teto-txt { fill: var(--negative); font-size: 13px; }
 .aar-chart .aar-regua__nota { fill: var(--ink-soft); font-size: 13px; }
-.aar-dash__table--quebra thead th { white-space: normal; }
+.aar-dash__table--quebra thead th, .aar-dash__table--quebra thead th.aar-dash__number { white-space: normal; }
 .aar-chart .aar-regua__bigode { stroke: var(--ink-soft); stroke-width: 1.5; }
 /* Zoom dos gráficos: barra de navegação com a janela visível e atalhos de período. */
 .aar-dash__navegador { flex: none; }
@@ -293,3 +293,5 @@ html { scroll-padding-top: calc(var(--aar-masthead-h) + var(--space-16)); }
 .aar-dash__navjanela { fill: var(--action); fill-opacity: .14; stroke: var(--action); stroke-width: 1.5; cursor: grab; }
 .aar-dash__navborda { fill: var(--action); cursor: ew-resize; }
 .aar-dash__atalhos { display: inline-flex; gap: var(--space-8); }
+/* Linha que é parte de um total (ex.: EBSERH dentro de Hospitais públicos): recuo e peso normal. */
+.aar-dash__table th.aar-dash__subgrupo { padding-left: var(--space-40); font-weight: 400; }
